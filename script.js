@@ -36,26 +36,49 @@ if (timerR <=0) {
   
   })
 
+var currentHour = dayjs().hour()
 
   saveOnScreen.forEach(time=>{
 $(`#${time}`).children("textarea").val(JSON.parse(localStorage.getItem(time)))
 
+var today = dayjs();
+  $('#currentDay').text(today.format('dddd, MMMM D, YYYY H:m'));
+  
+
+  if (currentHour > time){
+    $(`#${time}`).children("textarea").addClass("past").removeClass("present").removeClass("future")
+    
+  }
+
+  if (currentHour == time){
+    $(`#${time}`).children("textarea").addClass("present").removeClass("past").removeClass("future")
+ 
+
+}
+
+  if (currentHour < time){
+    $(`#${time}`).children("textarea").addClass("future").removeClass("past").removeClass("present")
+    
+}
   })
+  
 
   //Help Changing Colors//
+  /*var today = dayjs();
+  $('#currentDay').text(today.format('dddd, MMMM D, YYYY H:m'));
 
-  
-  if (dayjs().isBefore().format(H, today)){
+  if (dayjs().isBefore(today, "H")){
     $(`#${time}`).children("textarea").addClass("past").removeClass("present").removeClass("future")
+    
   }
 
-  if (dayjs().isSame().format(H, today)){
+  if (dayjs().isSame(today, "H")){
     $(`#${time}`).children("textarea").addClass("present").removeClass("past").removeClass("future")
   }
-  if (dayjs().isAfter().format(H, today)){
+  if (dayjs().isAfter(today, "H")){
     $(`#${time}`).children("textarea").addClass("future").removeClass("past").removeClass("present")
   }
-  
+  */
   
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
