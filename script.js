@@ -63,22 +63,7 @@ var today = dayjs();
   })
   
 
-  //Help Changing Colors//
-  /*var today = dayjs();
-  $('#currentDay').text(today.format('dddd, MMMM D, YYYY H:m'));
 
-  if (dayjs().isBefore(today, "H")){
-    $(`#${time}`).children("textarea").addClass("past").removeClass("present").removeClass("future")
-    
-  }
-
-  if (dayjs().isSame(today, "H")){
-    $(`#${time}`).children("textarea").addClass("present").removeClass("past").removeClass("future")
-  }
-  if (dayjs().isAfter(today, "H")){
-    $(`#${time}`).children("textarea").addClass("future").removeClass("past").removeClass("present")
-  }
-  */
   
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
