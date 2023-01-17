@@ -16,10 +16,5 @@ As I worked I considered the following...
 
 https://saf1ya-c0d3z.github.io/color-coded-planner/
 
-## Notes
-
-Work on your code in a repository and clone the main branch from GitHub Make sure the application loads with no errors Make sure the format of the webpage does not change after changing the semantic elements on the index.html file Use console.log to see if elements in the code are working how they are supposd to.
-
-Deploy the website using pages on GitHub
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
